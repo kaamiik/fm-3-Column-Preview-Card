@@ -72,13 +72,13 @@ main {
   padding: 48px;
 }
 
-.sedans {
+.card--sedans {
   background-color: var(--bright-orange);
 }
-.suvs {
+.card--suvs {
   background-color: var(--dark-cyan);
 }
-.luxury {
+.card--luxury {
   background-color: var(--very-dark-cyan);
 }
 
@@ -112,8 +112,8 @@ main {
   background-color: var(--very-light-gray);
   border: none;
   border-radius: 25px;
-  padding: 12px 32px;
-  transition: 0.1s ease;
+  padding: 0 32px;
+  height: 48px;
 }
 
 .btn--sedans {
@@ -127,17 +127,20 @@ main {
 }
 
 /* Hover Effects */
-.card__btn:hover,
-.card__btn:focus {
-  background-color: transparent;
-  border: 2px solid var(--very-light-gray);
-  color: var(--very-light-gray);
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .card__btn:hover,
+  .card__btn:focus {
+    background-color: transparent;
+    border: 2px solid currentColor;
+    /* margin: -2px; */
+    color: var(--very-light-gray);
+    cursor: pointer;
+  }
 }
 
 
 /* Desktop Screen */
-@media screen and (min-width: 925px) {
+@media (min-width: 925px) {
   main {
     flex-direction: row;
     margin-top: 0;
