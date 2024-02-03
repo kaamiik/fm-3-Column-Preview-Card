@@ -21,8 +21,13 @@ body {
 
 body,
 h1,
+h2,
 p {
   margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 body {
@@ -62,6 +67,8 @@ main {
   align-items: center;
   flex-grow: 1;
   margin-top: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .card {
@@ -108,7 +115,7 @@ main {
   margin-bottom: 25px;
 }
 
-.card__btn {
+.card__link {
   background-color: var(--very-light-gray);
   border: 2px solid currentColor;
   border-radius: 25px;
@@ -116,30 +123,27 @@ main {
   /* height: 48px; */
 }
 
-.btn--sedans {
+.card__link--sedans {
   color: var(--bright-orange);
 }
-.btn--suvs {
+.card__link--suvs {
   color: var(--dark-cyan);
 }
-.btn--luxury {
+.card__link--luxury {
   color: var(--very-dark-cyan);
 }
 
 /* Hover Effects */
-@media (hover: hover) and (pointer: fine) {
-  .card__btn:hover,
-  .card__btn:focus {
-    background-color: transparent;
-    /* border: 2px solid currentColor; */
-    color: var(--very-light-gray);
-    cursor: pointer;
-  }
+.card__link:hover,
+.card__link:focus {
+background-color: transparent;
+color: var(--very-light-gray);
+cursor: pointer;
 }
 
 
 /* Desktop Screen */
-@media (min-width: 925px) {
+ @media (min-width: 57.8125rem)  {  /* 925px */
   main {
     flex-direction: row;
     margin-top: 0;
